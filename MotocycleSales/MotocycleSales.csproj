@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E54F7F92-6BD0-4B00-A4FD-C9F6E5679AC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MotocycleSales</RootNamespace>
+    <AssemblyName>MotocycleSales</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=1.0.5.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.1.0.5\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AgentForm.Designer.cs">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Analyze.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Analyze.Designer.cs">
+      <DependentUpon>Analyze.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BikeCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BikeCard.Designer.cs">
+      <DependentUpon>BikeCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BikeInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BikeInventory.Designer.cs">
+      <DependentUpon>BikeInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BikeSpecification.cs" />
+    <Compile Include="BikeSpecifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BikeSpecifications.Designer.cs">
+      <DependentUpon>BikeSpecifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillConfirm.Designer.cs">
+      <DependentUpon>BillConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BillStatus.Designer.cs">
+      <DependentUpon>BillStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietHoaDon.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChuongTrinhKM.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CuaHang.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataFlow.cs" />
+    <Compile Include="FooterFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FooterFormControl.Designer.cs">
+      <DependentUpon>FooterFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HeaderFormControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HeaderFormControl.Designer.cs">
+      <DependentUpon>HeaderFormControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoaDon.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HRForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRForm.Designer.cs">
+      <DependentUpon>HRForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImagePath.cs" />
+    <Compile Include="ImportProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportProduct.Designer.cs">
+      <DependentUpon>ImportProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IncomeForm.Designer.cs">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDTO.cs" />
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KiemKe.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiKhachHang.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoaiSP.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageBill.Designer.cs">
+      <DependentUpon>ManageBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageBillDTO.cs" />
+    <Compile Include="ManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerForm.Designer.cs">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhapHang.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PayForm.Designer.cs">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payment.cs" />
+    <Compile Include="PersonalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonalInfo.Designer.cs">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDTO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QLBX.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBX.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBX.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QLBX.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBX.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="QueryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryForm.Designer.cs">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleProgram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaleProgram.Designer.cs">
+      <DependentUpon>SaleProgram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SanPham.cs">
+      <DependentUpon>QLBX.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StatisticDTO.cs" />
+    <Compile Include="VerticalBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="VerticalBar.Designer.cs">
+      <DependentUpon>VerticalBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProducts.Designer.cs">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgentForm.resx">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BikeCard.resx">
+      <DependentUpon>BikeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BikeInventory.resx">
+      <DependentUpon>BikeInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BikeSpecifications.resx">
+      <DependentUpon>BikeSpecifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BillConfirm.resx">
+      <DependentUpon>BillConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FooterFormControl.resx">
+      <DependentUpon>FooterFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HeaderFormControl.resx">
+      <DependentUpon>HeaderFormControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRForm.resx">
+      <DependentUpon>HRForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportProduct.resx">
+      <DependentUpon>ImportProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IncomeForm.resx">
+      <DependentUpon>IncomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageBill.resx">
+      <DependentUpon>ManageBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagerForm.resx">
+      <DependentUpon>ManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PayForm.resx">
+      <DependentUpon>PayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonalInfo.resx">
+      <DependentUpon>PersonalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QueryForm.resx">
+      <DependentUpon>QueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaleProgram.resx">
+      <DependentUpon>SaleProgram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerticalBar.resx">
+      <DependentUpon>VerticalBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProducts.resx">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="ProductDataHD.json" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="QLBX.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLBX.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="QLBX.edmx.diagram">
+      <DependentUpon>QLBX.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\honda_bg_login.jpg" />
+    <Content Include="Images\honda_logo.jpg" />
+    <Content Include="Images\honda_slogan_logo.png" />
+    <Content Include="Images\honda_slogan_toplogo.png" />
+    <Content Include="Images\icons\bike.png" />
+    <Content Include="Images\icons\bill.png" />
+    <Content Include="Images\icons\customer.png" />
+    <Content Include="Images\icons\edit.png" />
+    <Content Include="Images\icons\home.png" />
+    <Content Include="Images\icons\logout.png" />
+    <Content Include="Images\icons\pay.png" />
+    <Content Include="Images\icons\search.png" />
+    <Content Include="Images\icons\search_icon.jpg" />
+    <Content Include="Images\icons\statistic_money.png" />
+    <Content Include="Images\icons\user.png" />
+    <Content Include="Images\logo\honda_bg_login.jpg" />
+    <Content Include="Images\logo\honda_logo.jpg" />
+    <Content Include="Images\logo\honda_slogan_logo.png" />
+    <Content Include="Images\Sanpham\AirBlade125_DenVang.png" />
+    <Content Include="Images\Sanpham\AirBlade125_XanhDen.png" />
+    <Content Include="Images\Sanpham\AirBlade160_DenNau..png" />
+    <Content Include="Images\Sanpham\AirBlade160_DoXam.png" />
+    <Content Include="Images\Sanpham\CBR_DenDo.png" />
+    <Content Include="Images\Sanpham\CBR_DenXam.png" />
+    <Content Include="Images\Sanpham\CBR_Do.png" />
+    <Content Include="Images\Sanpham\SH_BacDen.png" />
+    <Content Include="Images\Sanpham\SH_DoDen.png" />
+    <Content Include="Images\Sanpham\SH_XanhDen.png" />
+    <Content Include="Images\Sanpham\Vision_VangDen.png" />
+    <Content Include="Images\Sanpham\Vision_XanhDen.png" />
+    <Content Include="Images\Sanpham\WinnerX-DenVang.png" />
+    <Content Include="Images\Sanpham\WinnerX_BacDen.png" />
+    <Content Include="Images\Sanpham\WinnerX_DenDo.png" />
+    <Content Include="Images\Sanpham\Xe_Blade_Den.png" />
+    <Content Include="Images\Sanpham\Xe_Blade_DenDo.png" />
+    <Content Include="Images\Sanpham\Xe_Blade_XanhDen.png" />
+    <Content Include="Images\Sanpham\Xe_Future_DoDen.png" />
+    <Content Include="Images\Sanpham\Xe_Future_TrangDen.png" />
+    <Content Include="Images\Sanpham\Xe_Future_XanhDen.png" />
+    <Content Include="Images\Sanpham\Xe_RSX_DoDen.png" />
+    <Content Include="Images\Sanpham\Xe_RSX_TrangDen.png" />
+    <Content Include="Images\Sanpham\Xe_RSX_XanhDen.png" />
+    <Content Include="Images\Sanpham\Xe_Wave_Kem.png" />
+    <Content Include="Images\Sanpham\Xe_Wave_Trang.png" />
+    <Content Include="QLBX.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBX.edmx</DependentUpon>
+      <LastGenOutput>QLBX.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="QLBX.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLBX.edmx</DependentUpon>
+      <LastGenOutput>QLBX.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

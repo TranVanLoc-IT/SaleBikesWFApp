@@ -1,0 +1,34 @@
+﻿[
+  {
+    "_maloai": "HDTC",
+    "_kichthuoc": "2.019 x 727 x 1.104 mm",
+    "_chieucaoyen": "795mm",
+    "_khoiluong": "122kg",
+    "_congsuat": "11.5kW/9.000 vòng/phút",
+    "_dongco": "PGM-FI,4 kỳ,DOHC, xy-lanh đơn,côn 6 số, làm mát bằng dung dịch",
+    "_kichthuoclop": "Trước:90/80-17M/C 46P, sau: 120/70-17M/C 58P",
+    "_dungtichxang": "4.5 lit"
+  },
+
+  {
+    "_maloai": "HDTG",
+    "_kichthuoc": "1.925 x 686 x 1.126 mm",
+    "_chieucaoyen": "785mm",
+    "_khoiluong": "98kg",
+    "_congsuat": "6.59kW/7.500rpm",
+    "_dongco": "4 kỳ, 1 xi lanh, làm mát bằng không khí",
+    "_kichthuoclop": "Trước:80/90-16M/C 43P, sau: 90/90-14M/C 56P",
+    "_dungtichxang": "4.9 lit"
+  },
+
+  {
+    "_maloai": "HDXS",
+    "_kichthuoc": "1.913 x 689 x 1.076 mm",
+    "_chieucaoyen": "770mm",
+    "_khoiluong": "96kg",
+    "_congsuat": "6.12kW/7.500 vòng/phút",
+    "_dongco": "4 kỳ, 1 xi lanh, làm mát bằng dung dịch",
+    "_kichthuoclop": "Trước:70/90-17M/C 38P, sau: 80/90-17M/C 50P",
+    "_dungtichxang": "3.7 lit"
+  }
+]
