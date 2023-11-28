@@ -33,6 +33,7 @@ namespace MotocycleSales
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BikeSpecifications));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.flowLayoutPanelBike = new System.Windows.Forms.FlowLayoutPanel();
+            this.txtMauSac = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.txtTypeName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -69,7 +70,6 @@ namespace MotocycleSales
             this.label2 = new System.Windows.Forms.Label();
             this.cbEditProduct = new System.Windows.Forms.ComboBox();
             this.btnSelectImg = new System.Windows.Forms.Button();
-            this.txtMauSac = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -80,7 +80,7 @@ namespace MotocycleSales
             // splitContainer1
             // 
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.splitContainer1.Location = new System.Drawing.Point(22, 81);
+            this.splitContainer1.Location = new System.Drawing.Point(12, 54);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -107,16 +107,23 @@ namespace MotocycleSales
             this.splitContainer1.Panel2.Controls.Add(this.txtMaxe);
             this.splitContainer1.Panel2.Controls.Add(this.label25);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer1.Size = new System.Drawing.Size(1201, 271);
-            this.splitContainer1.SplitterDistance = 355;
+            this.splitContainer1.Size = new System.Drawing.Size(1263, 298);
+            this.splitContainer1.SplitterDistance = 373;
             this.splitContainer1.TabIndex = 68;
             // 
             // flowLayoutPanelBike
             // 
-            this.flowLayoutPanelBike.Location = new System.Drawing.Point(7, 6);
+            this.flowLayoutPanelBike.Location = new System.Drawing.Point(5, 5);
             this.flowLayoutPanelBike.Name = "flowLayoutPanelBike";
-            this.flowLayoutPanelBike.Size = new System.Drawing.Size(345, 256);
+            this.flowLayoutPanelBike.Size = new System.Drawing.Size(363, 287);
             this.flowLayoutPanelBike.TabIndex = 0;
+            // 
+            // txtMauSac
+            // 
+            this.txtMauSac.Location = new System.Drawing.Point(95, 147);
+            this.txtMauSac.Name = "txtMauSac";
+            this.txtMauSac.Size = new System.Drawing.Size(118, 27);
+            this.txtMauSac.TabIndex = 71;
             // 
             // btnBack
             // 
@@ -128,7 +135,7 @@ namespace MotocycleSales
             this.btnBack.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
             this.btnBack.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBack.Location = new System.Drawing.Point(665, 214);
+            this.btnBack.Location = new System.Drawing.Point(665, 233);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(159, 43);
             this.btnBack.TabIndex = 70;
@@ -165,7 +172,7 @@ namespace MotocycleSales
             this.btnPay.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnPay.Image = ((System.Drawing.Image)(resources.GetObject("btnPay.Image")));
             this.btnPay.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPay.Location = new System.Drawing.Point(430, 216);
+            this.btnPay.Location = new System.Drawing.Point(430, 235);
             this.btnPay.Name = "btnPay";
             this.btnPay.Size = new System.Drawing.Size(177, 43);
             this.btnPay.TabIndex = 67;
@@ -239,17 +246,17 @@ namespace MotocycleSales
             this.gbSpec.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbSpec.Location = new System.Drawing.Point(297, 2);
             this.gbSpec.Name = "gbSpec";
-            this.gbSpec.Size = new System.Drawing.Size(542, 208);
+            this.gbSpec.Size = new System.Drawing.Size(584, 225);
             this.gbSpec.TabIndex = 55;
             this.gbSpec.TabStop = false;
             this.gbSpec.Text = "Thông số kỹ thuật";
             // 
             // txtTire
             // 
-            this.txtTire.Location = new System.Drawing.Point(354, 133);
+            this.txtTire.Location = new System.Drawing.Point(354, 144);
             this.txtTire.Multiline = true;
             this.txtTire.Name = "txtTire";
-            this.txtTire.Size = new System.Drawing.Size(173, 68);
+            this.txtTire.Size = new System.Drawing.Size(224, 77);
             this.txtTire.TabIndex = 36;
             // 
             // label5
@@ -282,7 +289,7 @@ namespace MotocycleSales
             this.txtEngine.Location = new System.Drawing.Point(353, 68);
             this.txtEngine.Multiline = true;
             this.txtEngine.Name = "txtEngine";
-            this.txtEngine.Size = new System.Drawing.Size(174, 62);
+            this.txtEngine.Size = new System.Drawing.Size(225, 70);
             this.txtEngine.TabIndex = 32;
             // 
             // label13
@@ -488,24 +495,19 @@ namespace MotocycleSales
             this.btnSelectImg.UseVisualStyleBackColor = true;
             this.btnSelectImg.Visible = false;
             // 
-            // txtMauSac
-            // 
-            this.txtMauSac.Location = new System.Drawing.Point(95, 147);
-            this.txtMauSac.Name = "txtMauSac";
-            this.txtMauSac.Size = new System.Drawing.Size(118, 27);
-            this.txtMauSac.TabIndex = 71;
-            // 
             // BikeSpecifications
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1224, 450);
+            this.ClientSize = new System.Drawing.Size(1287, 468);
             this.Controls.Add(this.btnFr);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cbEditProduct);
             this.Controls.Add(this.btnSelectImg);
             this.Controls.Add(this.confirmProduct_NextStep);
             this.Controls.Add(this.splitContainer1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "BikeSpecifications";
             this.Text = "BikeSpecifications";
             this.Load += new System.EventHandler(this.BikeSpecifications_Load);

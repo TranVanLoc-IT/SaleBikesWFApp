@@ -89,9 +89,9 @@ namespace MotocycleSales
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.mainPanel.AutoSize = true;
-            this.mainPanel.Location = new System.Drawing.Point(3, 159);
+            this.mainPanel.Location = new System.Drawing.Point(29, 159);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1344, 748);
+            this.mainPanel.Size = new System.Drawing.Size(1403, 748);
             this.mainPanel.TabIndex = 69;
             // 
             // headerForm

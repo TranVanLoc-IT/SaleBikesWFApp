@@ -27,6 +27,8 @@ namespace MotocycleSales
             label2.Visible = true;
             btnSelectImg.Visible = true;
             btnFr.Visible = true;
+            txtMauSac.Enabled = true;
+
         }
         public BikeSpecifications(NhanVien agent, string mx, string color, int f)
         {
@@ -59,6 +61,9 @@ namespace MotocycleSales
         {
             txtPrice.Enabled = false;
             txtQuantity.Enabled = false;
+
+            txtMauSac.Enabled = false;
+            txtMauSac.Text = xe.MauSac;
 
             flowLayoutPanelBike.AutoScroll = true;
             flowLayoutPanelBike.WrapContents = false;
@@ -128,7 +133,6 @@ namespace MotocycleSales
                 txtWeight.Text = ofBike._khoiluong;
                 txtFuelCapacity.Text = ofBike._dungtichxang;
             }
-            MessageBox.Show(xe.MauSac.VietnameseToEnglishChars().Capitalize() + "vaicalon");
             UpdateShowImageBike(xe.MauSac.VietnameseToEnglishChars().Capitalize());
         }
 
@@ -164,7 +168,6 @@ namespace MotocycleSales
             {
                 // vì Blade trùng AirBalde nên cho điều kiện riêng 
                 // lấy chuỗi đầu của db so sánh chuỗi img có chứa tên xe và màu đã xử lý chuỗi
-                MessageBox.Show(xe.TenXe);
                 if (img.Contains(selectedColor) && img.Contains(xe.TenXe.Substring(0, xe.TenXe.IndexOf(' '))))
                 {
                     if (img.Contains("Air") && !txtTenXe.Text.Contains("Air"))

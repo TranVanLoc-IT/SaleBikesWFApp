@@ -444,27 +444,34 @@ namespace MotocycleSales
                           select new ManageBillDTO { _tenkh = kh.TenKH, _mahd=hd.MaHD, _ngaylap=hd.NgayLap??DateTime.Now, _thanhtoan = (double)hd.TongTien,_xemua = xe.TenXe, _mausac = xe.MauSac };
             return getInfo.FirstOrDefault();
         }
-        public List<int> GetMonthStatisticBillInStore(string storeId)
+        public List<HoaDon> GetTimeStatisticBillInStore(string storeId, int month, int year)
         {
-            var getDates = (from itm in this.db.CuaHangs
-                             join nv in this.db.NhanViens
-                             on itm.MaCuaHang equals nv.MaCuaHang
-                             join hd in this.db.HoaDons
-                             on nv.MaNV equals hd.MaNV
-                             where itm.MaCuaHang == storeId
-                             group hd by hd.NgayLap
-                            into gr
-                             select new { date = gr.Key.ToString() }).ToList();
-            List<int> getMonths = new List<int>();
-            foreach( var d in getDates)
+            if (year == 0) year = DateTime.Now.Year;
+            List<HoaDon> hdl = new List<HoaDon>();
+            if (month == 0)
             {
-                int parse = 0;
-                if(int.TryParse(d.date.Split('/')[0], out parse))
-                {
-                    getMonths.Add(parse);
-                }    
+                hdl = (from itm in this.db.CuaHangs
+                                join nv in this.db.NhanViens
+                                on itm.MaCuaHang equals nv.MaCuaHang
+                                join hd in this.db.HoaDons
+                                on nv.MaNV equals hd.MaNV
+                                where itm.MaCuaHang == storeId
+                                && hd.NgayLap.Value.Year == year
+                                select hd).ToList();
             }
-            return getMonths;
+            else
+            {
+                hdl = (from itm in this.db.CuaHangs
+                               join nv in this.db.NhanViens
+                               on itm.MaCuaHang equals nv.MaCuaHang
+                               join hd in this.db.HoaDons
+                               on nv.MaNV equals hd.MaNV
+                               where itm.MaCuaHang == storeId   
+                               && hd.NgayLap.Value.Year == year
+                               && hd.NgayLap.Value.Month == month
+                               select hd).ToList();
+            }
+                return hdl;
         }
     }
 }

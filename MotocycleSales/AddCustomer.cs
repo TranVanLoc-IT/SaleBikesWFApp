@@ -92,6 +92,9 @@ namespace MotocycleSales
             if (t.StartsWith("KH") && t.Length == 6)
             {
                 var recieve = data.FindKHById(t);
+                btnAddCus.Enabled = true;
+                btnDelCus.Enabled = true;
+                btnEditCus.Enabled = true;
                 if (recieve != null)
                 {
                     panelCusinfo.Enabled = false;

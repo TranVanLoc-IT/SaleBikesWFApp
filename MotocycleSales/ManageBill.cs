@@ -13,6 +13,7 @@ namespace MotocycleSales
     public partial class ManageBill : Form
     {
         DataFlow data = new DataFlow();
+        public string mach { get; set; }
         public ManageBill()
         {
             InitializeComponent();
@@ -20,7 +21,23 @@ namespace MotocycleSales
 
         private void ManageBill_Load(object sender, EventArgs e)
         {
+            var agentOf = data.db.NhanViens.Where(i => i.MaCuaHang == mach).ToList();
 
+            var getDatas = (from itm in data.GetAllBills()
+                           join nv in agentOf
+                           on itm.MaNV equals nv.MaNV
+                           select new { valueMonth = itm.NgayLap.Value.Month, textMonth = "Tháng " + itm.NgayLap.Value.Month.ToString(),
+                                        valueYear = itm.NgayLap.Value.Year, textYear = "Năm " + itm.NgayLap.Value.Year.ToString()
+                           }).ToArray();
+
+            cbMonths.Items.AddRange(getDatas);
+            cbMonths.ValueMember = "valueMonth";
+            cbMonths.DisplayMember = "textMonth";
+
+
+            cbYears.Items.AddRange(getDatas);
+            cbYears.ValueMember = "valueYear";
+            cbYears.DisplayMember = "textYear";
         }
 
         private void txtBillSearch_TextChanged(object sender, EventArgs e)
@@ -34,25 +51,10 @@ namespace MotocycleSales
                     txtCustomerInBill.Text = recieve.KhachHang.TenKH;
                     dateSet.Text = recieve.NgayLap?.ToString("0:dd/mm/yyyy");
                     txtBillMoney.Text = recieve.TongTien?.ToString("N2");
+                    txtHistoryAgent.Text = recieve.MaNV;
+                    txtBillCode.Text = recieve.MaHD;
                     var bike = data.GetBillDetailsById(hd);
-                    txtcarBought.Text = bike.SanPham.TenXe + bike.MauSac;
-                }
-            }
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-            if (txtBillSearch.Text.Length == 4)
-            {
-                ManageBillDTO billInfo = data.GetBillInfo(txtBillSearch.Text);
-
-                if (billInfo != null)
-                {
-
-                    txtCustomerInBill.Text = billInfo._tenkh;
-                    txtBillMoney.Text = billInfo._thanhtoan.ToString();
-                    txtcarBought.Text = billInfo._xemua + " - " + billInfo._mausac;
-                    dateSet.Text = billInfo._ngaylap.ToString("g");
+                    txtcarBought.Text = bike.SanPham.TenXe + " - " + bike.MauSac;
                 }
                 else
                 {
@@ -61,7 +63,17 @@ namespace MotocycleSales
             }
         }
 
+        private void combobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int month = int.Parse(cbMonths.SelectedValue.ToString());
+            int year = int.Parse(cbYears.SelectedValue.ToString());
 
-
+            var bills = data.GetTimeStatisticBillInStore(mach, month, year);
+            lbTotalValue.Text = bills.Count().ToString();
+            dataGridView.DataSource = "";
+            dataGridView.DataSource = bills;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+        }
     }
 }

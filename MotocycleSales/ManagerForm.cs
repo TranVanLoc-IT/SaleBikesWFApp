@@ -71,18 +71,21 @@ namespace MotocycleSales
             workTimer.Start();
             headerForm.btnCustomerServices.Text = "Nhân sự";
             headerForm.btnCustomerServices.Name = "btnHR";
-
+            headerForm.btnCustomerServices.Click += Button_Click_Handler;
 
             headerForm.btnBillHandle.Text = "Doanh thu";
             headerForm.btnBillHandle.Name = "btnIncome";
+            headerForm.btnBillHandle.Click += Button_Click_Handler;
 
 
             headerForm.btnShowProduct.Text = "Mục Xe máy";
             headerForm.btnShowProduct.Name = "btnEditProduct";
-
+            headerForm.btnShowProduct.Click += Button_Click_Handler;
 
             headerForm.btnQueryInfo.Text = "Nhập xuất hàng";
             headerForm.btnQueryInfo.Name = "btnImport";
+            headerForm.btnQueryInfo.Click += Button_Click_Handler;
+
             foreach (var control in headerForm.Controls)
             {
                 if(control is Button)
@@ -121,6 +124,7 @@ namespace MotocycleSales
         {
             Button getButton = sender as Button;
             string buttonText = getButton.Name;
+            MessageBox.Show(getButton.Name);
             switch (buttonText)
             {
                 case "btnImport":

@@ -45,11 +45,11 @@ namespace MotocycleSales
             this.label20 = new System.Windows.Forms.Label();
             this.txtCusId = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.btnDelCus = new System.Windows.Forms.Button();
             this.er = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnEditCus = new System.Windows.Forms.Button();
-            this.btnAddCus = new System.Windows.Forms.Button();
             this.confirmCustomer_NextStep = new System.Windows.Forms.Button();
+            this.btnAddCus = new System.Windows.Forms.Button();
+            this.btnEditCus = new System.Windows.Forms.Button();
+            this.btnDelCus = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.panelCusinfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).BeginInit();
@@ -60,6 +60,9 @@ namespace MotocycleSales
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.btnAddCus);
+            this.groupBox3.Controls.Add(this.btnEditCus);
+            this.groupBox3.Controls.Add(this.btnDelCus);
             this.groupBox3.Controls.Add(this.panelCusinfo);
             this.groupBox3.Controls.Add(this.txtCusId);
             this.groupBox3.Controls.Add(this.label27);
@@ -68,7 +71,7 @@ namespace MotocycleSales
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(884, 236);
+            this.groupBox3.Size = new System.Drawing.Size(981, 311);
             this.groupBox3.TabIndex = 57;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin khách hàng";
@@ -87,7 +90,7 @@ namespace MotocycleSales
             this.panelCusinfo.Controls.Add(this.label20);
             this.panelCusinfo.Location = new System.Drawing.Point(14, 73);
             this.panelCusinfo.Name = "panelCusinfo";
-            this.panelCusinfo.Size = new System.Drawing.Size(863, 146);
+            this.panelCusinfo.Size = new System.Drawing.Size(933, 177);
             this.panelCusinfo.TabIndex = 33;
             // 
             // txtBonus
@@ -206,49 +209,26 @@ namespace MotocycleSales
             this.label27.TabIndex = 18;
             this.label27.Text = "CCCD khách";
             // 
-            // btnDelCus
-            // 
-            this.btnDelCus.AutoSize = true;
-            this.btnDelCus.BackColor = System.Drawing.Color.Silver;
-            this.btnDelCus.Enabled = false;
-            this.btnDelCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.btnDelCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelCus.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCus.Image")));
-            this.btnDelCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelCus.Location = new System.Drawing.Point(294, 278);
-            this.btnDelCus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelCus.Name = "btnDelCus";
-            this.btnDelCus.Size = new System.Drawing.Size(104, 40);
-            this.btnDelCus.TabIndex = 26;
-            this.btnDelCus.Text = "Xóa";
-            this.btnDelCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelCus.UseVisualStyleBackColor = false;
-            this.btnDelCus.Click += new System.EventHandler(this.btnAddCus_Click);
-            // 
             // er
             // 
             this.er.ContainerControl = this;
             // 
-            // btnEditCus
+            // confirmCustomer_NextStep
             // 
-            this.btnEditCus.AutoSize = true;
-            this.btnEditCus.BackColor = System.Drawing.Color.Silver;
-            this.btnEditCus.Enabled = false;
-            this.btnEditCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.btnEditCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditCus.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCus.Image")));
-            this.btnEditCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditCus.Location = new System.Drawing.Point(431, 278);
-            this.btnEditCus.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEditCus.Name = "btnEditCus";
-            this.btnEditCus.Size = new System.Drawing.Size(158, 40);
-            this.btnEditCus.TabIndex = 58;
-            this.btnEditCus.Text = "Cập nhật";
-            this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEditCus.UseVisualStyleBackColor = false;
-            this.btnEditCus.Click += new System.EventHandler(this.btnAddCus_Click);
+            this.confirmCustomer_NextStep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.confirmCustomer_NextStep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.confirmCustomer_NextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.confirmCustomer_NextStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmCustomer_NextStep.Image = ((System.Drawing.Image)(resources.GetObject("confirmCustomer_NextStep.Image")));
+            this.confirmCustomer_NextStep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.confirmCustomer_NextStep.Location = new System.Drawing.Point(854, 294);
+            this.confirmCustomer_NextStep.Name = "confirmCustomer_NextStep";
+            this.confirmCustomer_NextStep.Size = new System.Drawing.Size(141, 43);
+            this.confirmCustomer_NextStep.TabIndex = 70;
+            this.confirmCustomer_NextStep.Text = "Tiếp tục";
+            this.confirmCustomer_NextStep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.confirmCustomer_NextStep.UseVisualStyleBackColor = true;
+            this.confirmCustomer_NextStep.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // btnAddCus
             // 
@@ -260,43 +240,60 @@ namespace MotocycleSales
             this.btnAddCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCus.Image = ((System.Drawing.Image)(resources.GetObject("btnAddCus.Image")));
             this.btnAddCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddCus.Location = new System.Drawing.Point(625, 278);
+            this.btnAddCus.Location = new System.Drawing.Point(570, 257);
             this.btnAddCus.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddCus.Name = "btnAddCus";
             this.btnAddCus.Size = new System.Drawing.Size(122, 40);
-            this.btnAddCus.TabIndex = 59;
+            this.btnAddCus.TabIndex = 62;
             this.btnAddCus.Text = "Thêm";
             this.btnAddCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAddCus.UseVisualStyleBackColor = false;
-            this.btnAddCus.Click += new System.EventHandler(this.btnAddCus_Click);
             // 
-            // confirmCustomer_NextStep
+            // btnEditCus
             // 
-            this.confirmCustomer_NextStep.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.confirmCustomer_NextStep.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.confirmCustomer_NextStep.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.confirmCustomer_NextStep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.confirmCustomer_NextStep.Image = ((System.Drawing.Image)(resources.GetObject("confirmCustomer_NextStep.Image")));
-            this.confirmCustomer_NextStep.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.confirmCustomer_NextStep.Location = new System.Drawing.Point(815, 302);
-            this.confirmCustomer_NextStep.Name = "confirmCustomer_NextStep";
-            this.confirmCustomer_NextStep.Size = new System.Drawing.Size(141, 43);
-            this.confirmCustomer_NextStep.TabIndex = 70;
-            this.confirmCustomer_NextStep.Text = "Tiếp tục";
-            this.confirmCustomer_NextStep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.confirmCustomer_NextStep.UseVisualStyleBackColor = true;
-            this.confirmCustomer_NextStep.Click += new System.EventHandler(this.NextButton_Click);
+            this.btnEditCus.AutoSize = true;
+            this.btnEditCus.BackColor = System.Drawing.Color.Silver;
+            this.btnEditCus.Enabled = false;
+            this.btnEditCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btnEditCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditCus.Image = ((System.Drawing.Image)(resources.GetObject("btnEditCus.Image")));
+            this.btnEditCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEditCus.Location = new System.Drawing.Point(376, 257);
+            this.btnEditCus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditCus.Name = "btnEditCus";
+            this.btnEditCus.Size = new System.Drawing.Size(158, 40);
+            this.btnEditCus.TabIndex = 61;
+            this.btnEditCus.Text = "Cập nhật";
+            this.btnEditCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEditCus.UseVisualStyleBackColor = false;
+            // 
+            // btnDelCus
+            // 
+            this.btnDelCus.AutoSize = true;
+            this.btnDelCus.BackColor = System.Drawing.Color.Silver;
+            this.btnDelCus.Enabled = false;
+            this.btnDelCus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btnDelCus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelCus.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelCus.Image = ((System.Drawing.Image)(resources.GetObject("btnDelCus.Image")));
+            this.btnDelCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelCus.Location = new System.Drawing.Point(239, 257);
+            this.btnDelCus.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelCus.Name = "btnDelCus";
+            this.btnDelCus.Size = new System.Drawing.Size(104, 40);
+            this.btnDelCus.TabIndex = 60;
+            this.btnDelCus.Text = "Xóa";
+            this.btnDelCus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelCus.UseVisualStyleBackColor = false;
             // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 357);
+            this.ClientSize = new System.Drawing.Size(1074, 397);
             this.Controls.Add(this.confirmCustomer_NextStep);
-            this.Controls.Add(this.btnAddCus);
-            this.Controls.Add(this.btnEditCus);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.btnDelCus);
             this.Name = "AddCustomer";
             this.Text = "AddCustomer";
             this.Load += new System.EventHandler(this.AddCustomer_Load);
@@ -306,7 +303,6 @@ namespace MotocycleSales
             this.panelCusinfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.er)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -322,14 +318,14 @@ namespace MotocycleSales
         private System.Windows.Forms.TextBox txtCustomerType;
         private System.Windows.Forms.TextBox txtCusSDT;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button btnDelCus;
         private System.Windows.Forms.TextBox txtCusId;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.ErrorProvider er;
         private System.Windows.Forms.TextBox txtBonus;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button confirmCustomer_NextStep;
         private System.Windows.Forms.Button btnAddCus;
         private System.Windows.Forms.Button btnEditCus;
-        private System.Windows.Forms.Button confirmCustomer_NextStep;
+        private System.Windows.Forms.Button btnDelCus;
     }
 }

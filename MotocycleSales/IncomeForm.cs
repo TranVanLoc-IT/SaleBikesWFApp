@@ -24,10 +24,10 @@ namespace MotocycleSales
         private void IncomeForm_Load(object sender, EventArgs e)
         {
 
-            foreach (var month in data.GetMonthStatisticBillInStore(_manager.MaQuanLy))
-            {
-                cbStatisticTimeOptions.Items.Add("Tháng " + month);
-            }
+            //foreach (var month in data.GetMonthStatisticBillInStore(_manager.MaQuanLy))
+            //{
+            //    cbStatisticTimeOptions.Items.Add("Tháng " + month);
+            //}
             gbStatisticIncome.Enabled = true;
         }
 

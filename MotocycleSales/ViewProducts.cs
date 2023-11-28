@@ -27,7 +27,6 @@ namespace MotocycleSales
         private void LoadHotBikes()
         {
             var getHotSales = data.GetHotBikes();
-            Console.WriteLine(getHotSales.Count);
 
             foreach (var itm in getHotSales)
             {
@@ -104,7 +103,7 @@ namespace MotocycleSales
         {
             Button btn = sender as Button;
             string[] cpns = btn.Name.Split('_');
-            BikeSpecifications specs = new BikeSpecifications(nv,cpns[1], cpns[2], 1);
+            BikeSpecifications specs = new BikeSpecifications(nv,cpns[1], cpns[2], 0);
             specs.ShowDialog();
         }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
